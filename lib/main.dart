@@ -35,9 +35,9 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           navigatorKey: navigatorKey,
           theme: AppTheme.lightTheme,
-          // onGenerateRoute: AppRouter.generateRoute,
-          // initialRoute: ScreenName.splashScreen,
-          home: RequestAppointment(),
+          onGenerateRoute: AppRouter.generateRoute,
+          initialRoute: ScreenName.splashScreen,
+          // home: RequestAppointment(),
         );
       },
     );
