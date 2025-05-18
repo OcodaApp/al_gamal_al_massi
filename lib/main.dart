@@ -9,7 +9,6 @@ import 'bloc_observer.dart';
 import 'core/app_router/app_router.dart';
 import 'core/app_router/screens_name.dart';
 import 'firebase_options.dart';
-import 'presentation/screens/appointment_screens/request_appointment.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
