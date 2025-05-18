@@ -9,7 +9,7 @@ import '../../../core/app_theme/app_colors.dart';
 import '../../../core/app_theme/custom_themes.dart';
 import '../../../core/constants/extensions.dart';
 import '../../../presentation/widgets/shared_widget/custom_sizedbox.dart';
-import '../../../presentation/widgets/user_home_widdgets/home_tab_bar_widget.dart';
+import '../../widgets/user_home_widgets/home_tab_bar_widget.dart';
 
 class DoctorsCategoryOrClinicScreen extends StatelessWidget {
   const DoctorsCategoryOrClinicScreen({super.key});
@@ -23,9 +23,13 @@ class DoctorsCategoryOrClinicScreen extends StatelessWidget {
         leading: const BackButton(
           color: AppColors.blackColor,
         ),
-        title: const Text("Clinic name",),
-        titleTextStyle: CustomThemes.primaryTextColorTextTheme(context)
-            .copyWith(fontSize: 24.sp, fontWeight: FontWeight.normal,),
+        title: const Text(
+          "Clinic name",
+        ),
+        titleTextStyle: CustomThemes.greyTextColorTextTheme(context).copyWith(
+          fontSize: 24.sp,
+          fontWeight: FontWeight.normal,
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +79,6 @@ class DoctorsCategoryOrClinicScreen extends StatelessWidget {
               )
             ],
           ).symmetricPadding(horizontal: 16),
-
           const CustomSizedBox(
             height: 24,
           ),
@@ -86,7 +89,6 @@ class DoctorsCategoryOrClinicScreen extends StatelessWidget {
               fontWeight: FontWeight.normal,
             ),
           ).symmetricPadding(horizontal: 16),
-
           const CustomSizedBox(
             height: 16,
           ),

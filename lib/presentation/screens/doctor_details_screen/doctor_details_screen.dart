@@ -34,8 +34,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                         "Name",
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: CustomThemes.primaryTextColorTextTheme(context)
-                            .copyWith(
+                        style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                           fontSize: 24.sp,
                           fontWeight: FontWeight.bold,
                         ),
@@ -43,8 +42,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                     ),
                     Text(
                       "30 SAR",
-                      style: CustomThemes.primaryTextColorTextTheme(context)
-                          .copyWith(
+                      style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
                       ),
@@ -58,8 +56,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                   "About Offer",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: CustomThemes.secondaryTextColorTextTheme(context)
-                      .copyWith(
+                  style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.normal,
                   ),
@@ -78,8 +75,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                   ),
                   child: Text(
                     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-                    style: CustomThemes.primaryTextColorTextTheme(context)
-                        .copyWith(
+                    style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 16.sp,
                       height: 24.h / 16.sp,
                       fontWeight: FontWeight.normal,
@@ -107,9 +103,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                               "Exp",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: CustomThemes.secondaryTextColorTextTheme(
-                                      context)
-                                  .copyWith(
+                              style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                                 fontSize: 16.sp,
                                 height: 24.h / 16.sp,
                                 fontWeight: FontWeight.normal,
@@ -119,9 +113,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                               "3 years",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: CustomThemes.primaryTextColorTextTheme(
-                                      context)
-                                  .copyWith(
+                              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -149,9 +141,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                               "Happy clients",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: CustomThemes.secondaryTextColorTextTheme(
-                                      context)
-                                  .copyWith(
+                              style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                                 fontSize: 16.sp,
                                 height: 24.h / 16.sp,
                                 fontWeight: FontWeight.normal,
@@ -161,9 +151,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                               "+62",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: CustomThemes.primaryTextColorTextTheme(
-                                      context)
-                                  .copyWith(
+                              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -182,8 +170,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                     Expanded(
                       child: Text(
                         "Calendar",
-                        style: CustomThemes.secondaryTextColorTextTheme(context)
-                            .copyWith(
+                        style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                           fontSize: 16.sp,
                           height: 24.h / 16.sp,
                           fontWeight: FontWeight.normal,
@@ -236,8 +223,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                     Expanded(
                       child: Text(
                         "Reviews",
-                        style: CustomThemes.primaryTextColorTextTheme(context)
-                            .copyWith(
+                        style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                           fontSize: 24.sp,
                           fontWeight: FontWeight.normal,
                           // height: 14.sp / 20,
@@ -251,8 +237,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                       ),
                       child: Text(
                         "View all",
-                        style: CustomThemes.primaryColorTextTheme(context)
-                            .copyWith(
+                        style: CustomThemes.primaryColorTextTheme(context).copyWith(
                           fontSize: 14.sp,
                           fontWeight: FontWeight.bold,
                           // height: 14.sp / 20,
@@ -261,7 +246,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                CustomSizedBox(
+                const CustomSizedBox(
                   height: 8,
                 ),
                 ListView.separated(
@@ -279,7 +264,7 @@ class DoctorsDetailsScreen extends StatelessWidget {
                   itemCount: 3,
                 ),
                 CustomElevatedButton(
-                  onPressed: (){},
+                  onPressed: () {},
                   padding: EdgeInsets.symmetric(vertical: 12.h),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -289,11 +274,12 @@ class DoctorsDetailsScreen extends StatelessWidget {
                         width: 16.w,
                         height: 16.h,
                       ),
-                      const CustomSizedBox(width: 4,),
+                      const CustomSizedBox(
+                        width: 4,
+                      ),
                       Text(
                         "Schedule date",
-                        style: CustomThemes.whiteTextColorTextTheme(context)
-                            .copyWith(
+                        style: CustomThemes.whiteTextColorTextTheme(context).copyWith(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.normal,
                         ),
@@ -380,8 +366,7 @@ class DoctorDetailsIntroWidget extends StatelessWidget {
                     ),
                     Text(
                       "4.8",
-                      style: CustomThemes.primaryTextColorTextTheme(context)
-                          .copyWith(
+                      style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
@@ -425,7 +410,7 @@ class ReviewWidget extends StatelessWidget {
                 "FirstName LastName",
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -437,8 +422,7 @@ class ReviewWidget extends StatelessWidget {
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
                 maxLines: 4,
                 overflow: TextOverflow.ellipsis,
-                style:
-                    CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                   fontSize: 14,
                   fontWeight: FontWeight.normal,
                 ),
@@ -458,7 +442,7 @@ class ReviewWidget extends StatelessWidget {
             ),
             Text(
               "4.8",
-              style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                 fontSize: 10.sp,
                 fontWeight: FontWeight.normal,
               ),

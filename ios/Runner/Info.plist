@@ -47,5 +47,12 @@
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
     <string>We need access to your microphone to record audio.</string>
+
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs camera access to scan QR codes to add users to teams.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs photos access to share photos in the chat and to change profile image.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app requires Mic permission to record a voice in the chat.</string>
 </dict>
 </plist>

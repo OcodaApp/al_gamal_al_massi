@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "1017195976044",
+    "project_id": "first-project-69cd1",
+    "storage_bucket": "first-project-69cd1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017195976044:android:88e38df5ec3867f4814f49",
+        "android_client_info": {
+          "package_name": "com.example.al_gamal_al_massi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017195976044-jcritrg8cugeofh689vplg7u7e46d6ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBbYHPrN73iSD7pXA8EuSC9C-GFM7okfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017195976044-jcritrg8cugeofh689vplg7u7e46d6ph.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017195976044-0ke3oefooc7ms0dhv2tb3vtfggc5978m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.alGamalAlMassi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017195976044:android:3e5117fe9d0d7530814f49",
+        "android_client_info": {
+          "package_name": "com.example.notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017195976044-jcritrg8cugeofh689vplg7u7e46d6ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBbYHPrN73iSD7pXA8EuSC9C-GFM7okfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017195976044-jcritrg8cugeofh689vplg7u7e46d6ph.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017195976044-0ke3oefooc7ms0dhv2tb3vtfggc5978m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.alGamalAlMassi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

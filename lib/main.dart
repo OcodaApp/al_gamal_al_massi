@@ -1,22 +1,25 @@
 import 'package:al_gamal_al_massi/core/app_theme/app_theme.dart';
 import 'package:al_gamal_al_massi/core/cache_helper/shared_pref_methods.dart';
-import 'package:al_gamal_al_massi/login.dart';
-import 'package:al_gamal_al_massi/presentation/screens/auth_screens/splash_screen.dart';
-import 'package:al_gamal_al_massi/view_model/auth_cubit/auth_cubit.dart';
-import 'package:al_gamal_al_massi/view_model/chat_cubit/chat_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'bloc_observer.dart';
+import 'core/app_router/app_router.dart';
+import 'core/app_router/screens_name.dart';
 import 'firebase_options.dart';
+import 'presentation/screens/appointment_screens/request_appointment.dart';
 
-void main() async{
+final navigatorKey = GlobalKey<NavigatorState>();
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await CacheHelper.init();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Bloc.observer = MyBlocObserver();
+  await CacheHelper.init();
   runApp(const MyApp());
 }
 
@@ -26,32 +29,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(390, 844,),
-      builder: (context,child) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(create: (context)=>AuthCubit(),),
-            BlocProvider(create: (context)=>ChatCubit(),),
-          ],
-          child: MaterialApp(
-            title: 'Flutter Demo',
-            theme: AppTheme.lightTheme,
-            // onGenerateRoute: AppRouter.generateRoute,
-            // initialRoute: ScreenName.splashScreen,
-            home: SplashScreen(),
-          ),
+      designSize: const Size(390, 844),
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          navigatorKey: navigatorKey,
+          theme: AppTheme.lightTheme,
+          // onGenerateRoute: AppRouter.generateRoute,
+          // initialRoute: ScreenName.splashScreen,
+          home: RequestAppointment(),
         );
-      }
+      },
     );
   }
 }
-
-//Dependency injection
-//file ===> inject Dependency
-
-// Object , instance
-
-// Get it
-
-// Singleton ==> only instance create
-// Factory ==> new instance create

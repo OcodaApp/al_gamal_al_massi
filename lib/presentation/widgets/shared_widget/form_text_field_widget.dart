@@ -31,8 +31,7 @@ class FormTextFieldWidget extends StatelessWidget {
             Expanded(
               child: Text(
                 formTitle,
-                style:
-                    CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
                   height: 22 / 16.sp,
@@ -43,8 +42,7 @@ class FormTextFieldWidget extends StatelessWidget {
               visible: optional,
               child: Text(
                 "(optional)",
-                style:
-                    CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
                   height: 22 / 14.sp,
@@ -53,7 +51,7 @@ class FormTextFieldWidget extends StatelessWidget {
             )
           ],
         ),
-        CustomSizedBox(
+        const CustomSizedBox(
           height: 8,
         ),
         CustomTextField(

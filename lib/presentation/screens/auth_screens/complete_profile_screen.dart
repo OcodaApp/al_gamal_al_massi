@@ -20,7 +20,6 @@ class CompleteProfileScreen extends StatefulWidget {
 
 class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
   List<Map<String, dynamic>> profileTypeList = [
-
     {
       "image": SvgPath.patient,
       "title": "Patient",
@@ -29,13 +28,13 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
       "image": SvgPath.doctor,
       "title": "Doctor",
     },
-    {
-      "image": SvgPath.organisation,
-      "title": "Organisation",
-    },
+    // {
+    //   "image": SvgPath.organisation,
+    //   "title": "Organisation",
+    // },
   ];
 
-  int selectedProfileType = 2;
+  int selectedProfileType = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +48,13 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
             const CustomSizedBox(
               height: 32,
             ),
-            Image.asset(
-              ImagesPath.appLogo,
-              height: 60.h,
-              width: 160.w,
+            SvgPicture.asset(
+              SvgPath.logo,
+              width: 177.w,
+              colorFilter: const ColorFilter.mode(
+                AppColors.primaryColor,
+                BlendMode.srcIn,
+              ),
             ),
             const CustomSizedBox(
               height: 32,
@@ -60,10 +62,8 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
             Text(
               "Complete your info that has signed with phone",
               textAlign: TextAlign.center,
-              style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+              style: CustomThemes.greyColor73TextTheme(context).copyWith(
                 fontSize: 24.sp,
-                color: const Color(0xff818181),
-                height: 32 / 24,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -73,9 +73,8 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
             Text(
               "+966 553 848 381",
               textAlign: TextAlign.center,
-              style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                 fontSize: 24.sp,
-                height: 32 / 24,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -108,7 +107,6 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
               style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
-                height: 22 / 16.sp,
               ),
             ),
             const CustomSizedBox(
@@ -142,11 +140,9 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                   ),
                   child: Text(
                     "Jun 10, 2024",
-                    style: CustomThemes.secondaryTextColorTextTheme(context)
-                        .copyWith(
+                    style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w400,
-                      height: 22 / 16.sp,
                     ),
                   ),
                 ),
@@ -184,17 +180,16 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
             ),
             Text(
               "Who are you ?",
-              style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
-                height: 24 / 20.sp,
               ),
             ),
             const CustomSizedBox(
               height: 16,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(
                 profileTypeList.length,
                 (index) {
@@ -211,21 +206,18 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
               ),
             ),
             Visibility(
-              visible: selectedProfileType==2,
+              visible: selectedProfileType == 2,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   const CustomSizedBox(
                     height: 16,
                   ),
                   Text(
                     "Download the contract",
-                    style: CustomThemes.primaryTextColorTextTheme(context)
-                        .copyWith(
+                    style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w500,
-                      height: 24 / 16.sp,
                     ),
                   ),
                   const CustomSizedBox(
@@ -241,11 +233,9 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                   ),
                   Text(
                     "upload the contract after you signature",
-                    style: CustomThemes.primaryTextColorTextTheme(context)
-                        .copyWith(
+                    style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w500,
-                      height: 24 / 16.sp,
                     ),
                   ),
                   const CustomSizedBox(
@@ -262,11 +252,10 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
             const CustomSizedBox(
               height: 32,
             ),
-
             CustomElevatedButton(
               onPressed: () {
-
-                Navigator.pushNamedAndRemoveUntil(context, ScreenName.userMainLayoutScreen, (route)=>false);
+                Navigator.pushNamedAndRemoveUntil(
+                    context, ScreenName.userMainLayoutScreen, (route) => false);
               },
               text: "Sign up",
             ),
@@ -308,9 +297,7 @@ class ChooseProfileTypeWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(
             6.r,
           ),
-          color: isSelected
-              ? AppColors.selectedProfileTypeBackColor
-              : AppColors.whiteColor,
+          color: isSelected ? AppColors.selectedProfileTypeBackColor : AppColors.whiteColor,
           border: Border.all(
             width: 1.5.w,
             color: isSelected
@@ -332,12 +319,12 @@ class ChooseProfileTypeWidget extends StatelessWidget {
             Text(
               title,
               style: isSelected
-                  ? CustomThemes.primaryTextColorTextTheme(context).copyWith(
+                  ? CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,
                       height: 24 / 16.sp,
                     )
-                  : CustomThemes.primaryTextColorTextTheme(context).copyWith(
+                  : CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w500,
                       height: 24 / 16.sp,

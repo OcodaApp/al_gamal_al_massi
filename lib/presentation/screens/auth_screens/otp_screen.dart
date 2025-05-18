@@ -35,7 +35,7 @@ class OtpScreen extends StatelessWidget {
             Text(
               "OTP Verifications",
               textAlign: TextAlign.center,
-              style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                 fontSize: 24.sp,
                 height: 32 / 24,
                 fontWeight: FontWeight.w600,
@@ -48,8 +48,7 @@ class OtpScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               text: TextSpan(
                 text: "Enter Otp that sent to",
-                style:
-                    CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                   fontSize: 14.sp,
                   height: 20 / 14,
                   fontWeight: FontWeight.w300,
@@ -57,8 +56,7 @@ class OtpScreen extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "  +966 000 55000 500",
-                    style: CustomThemes.primaryTextColorTextTheme(context)
-                        .copyWith(
+                    style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 14.sp,
                       height: 20 / 14,
                       fontWeight: FontWeight.w600,
@@ -77,7 +75,6 @@ class OtpScreen extends StatelessWidget {
             CustomElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, ScreenName.completeProfile);
-
               },
               text: "Verify",
             ),
@@ -86,8 +83,7 @@ class OtpScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               text: TextSpan(
                 text: "Didn’t get a code?",
-                style:
-                    CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                   fontSize: 14.sp,
                   height: 20 / 14,
                   fontWeight: FontWeight.w300,
@@ -98,7 +94,7 @@ class OtpScreen extends StatelessWidget {
                     alignment: PlaceholderAlignment.baseline,
                     child: TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         " Resend again",
                       ),
                     ),

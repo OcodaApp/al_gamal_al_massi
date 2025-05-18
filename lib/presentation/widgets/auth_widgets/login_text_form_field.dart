@@ -6,7 +6,7 @@ import '../../../core/app_theme/custom_themes.dart';
 
 class LoginTextFormField extends StatelessWidget {
   final TextEditingController? controller;
-  const LoginTextFormField({super.key,  this.controller});
+  const LoginTextFormField({super.key, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class LoginTextFormField extends StatelessWidget {
       onTapOutside: (pointer) {
         FocusScope.of(context).unfocus();
       },
-      style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+      style: CustomThemes.greyTextColorTextTheme(context).copyWith(
         fontSize: 16.sp,
         height: 22 / 18,
         fontWeight: FontWeight.w400,
@@ -25,8 +25,7 @@ class LoginTextFormField extends StatelessWidget {
           vertical: 10.h,
           horizontal: 16.w,
         ),
-        hintStyle:
-        CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+        hintStyle: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
           fontSize: 16.sp,
           fontWeight: FontWeight.w300,
         ),
@@ -40,8 +39,7 @@ class LoginTextFormField extends StatelessWidget {
               Text(
                 "+966",
                 textAlign: TextAlign.start,
-                style: CustomThemes.primaryTextColorTextTheme(context)
-                    .copyWith(
+                style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                   fontSize: 17.sp,
                   height: 22 / 17,
                   fontWeight: FontWeight.w400,

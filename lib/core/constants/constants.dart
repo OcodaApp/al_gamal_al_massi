@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../app_theme/app_colors.dart';
-import '../cache_helper/cache_keys.dart';
-import '../cache_helper/shared_pref_methods.dart';
 
 // import '../cache_manager/cache_keys.dart';
 // import '../cache_manager/shared_preferences.dart';

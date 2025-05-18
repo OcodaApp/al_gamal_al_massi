@@ -1,4 +1,4 @@
-class ScreenName{
+class ScreenName {
   static const splashScreen = "splashScreen";
   static const loginOrRegisterScreen = "loginOrRegisterScreen";
   static const otpScreen = "otpScreen";
@@ -7,4 +7,5 @@ class ScreenName{
   static const allDoctorsInClinicOrCategoryScreen = "allDoctorsInClinicOrCategoryScreen";
   static const conversationScreen = "conversationScreen";
   static const userMainLayoutScreen = "userMainLayoutScreen";
+  static const editProfile = "editProfile";
 }

@@ -1,12 +1,14 @@
 import 'package:al_gamal_al_massi/core/app_theme/app_colors.dart';
 import 'package:al_gamal_al_massi/core/app_theme/custom_themes.dart';
 import 'package:al_gamal_al_massi/core/assets_path/svg_path.dart';
-import 'package:al_gamal_al_massi/presentation/screens/appointments_screens/appointment_screen.dart';
+import 'package:al_gamal_al_massi/presentation/screens/appointment_screens/appointment_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/chat_screens/my_chats_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/home_screens/user_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../profiles_screen/profile_screen.dart';
 
 class UserMainLayoutScreen extends StatefulWidget {
   const UserMainLayoutScreen({super.key});
@@ -20,7 +22,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     const UserHomeScreen(),
     const AppointmentScreen(),
     const MyChatsScreen(),
-    const Scaffold(),
+    const ProfileScreen(),
   ];
   int currentIndex = 0;
 
@@ -38,8 +40,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
           fontSize: 12.sp,
           fontWeight: FontWeight.bold,
         ),
-        selectedLabelStyle:
-            CustomThemes.primaryColorTextTheme(context).copyWith(
+        selectedLabelStyle: CustomThemes.primaryColorTextTheme(context).copyWith(
           fontSize: 12.sp,
           fontWeight: FontWeight.bold,
         ),
@@ -55,9 +56,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
               height: 22.h,
               width: 22.w,
               colorFilter: ColorFilter.mode(
-                currentIndex == 0
-                    ? AppColors.primaryColor
-                    : AppColors.secondaryTextColor,
+                currentIndex == 0 ? AppColors.primaryColor : AppColors.secondaryTextColor,
                 BlendMode.srcIn,
               ),
             ),
@@ -67,12 +66,11 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
             icon: SvgPicture.asset(
               SvgPath.calendarDots,
               height: 22.h,
-              width: 22.w,colorFilter: ColorFilter.mode(
-              currentIndex == 1
-                  ? AppColors.primaryColor
-                  : AppColors.secondaryTextColor,
-              BlendMode.srcIn,
-            ),
+              width: 22.w,
+              colorFilter: ColorFilter.mode(
+                currentIndex == 1 ? AppColors.primaryColor : AppColors.secondaryTextColor,
+                BlendMode.srcIn,
+              ),
             ),
             label: "Appointments",
           ),
@@ -82,9 +80,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
               height: 22.h,
               width: 22.w,
               colorFilter: ColorFilter.mode(
-                currentIndex == 2
-                    ? AppColors.primaryColor
-                    : AppColors.secondaryTextColor,
+                currentIndex == 2 ? AppColors.primaryColor : AppColors.secondaryTextColor,
                 BlendMode.srcIn,
               ),
             ),
@@ -96,9 +92,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
               height: 22.h,
               width: 22.w,
               colorFilter: ColorFilter.mode(
-                currentIndex == 3
-                    ? AppColors.primaryColor
-                    : AppColors.secondaryTextColor,
+                currentIndex == 3 ? AppColors.primaryColor : AppColors.secondaryTextColor,
                 BlendMode.srcIn,
               ),
             ),

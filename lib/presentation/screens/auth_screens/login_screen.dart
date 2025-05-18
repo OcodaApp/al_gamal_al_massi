@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
         Text(
           "Lorem ipsum dolor sit amet, consectetuer",
           textAlign: TextAlign.center,
-          style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+          style: CustomThemes.greyTextColorTextTheme(context).copyWith(
             fontSize: 24.sp,
             height: 32 / 24,
             fontWeight: FontWeight.w600,
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
         Text(
           "Enter your phone number",
           textAlign: TextAlign.start,
-          style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+          style: CustomThemes.greyTextColorTextTheme(context).copyWith(
             fontSize: 18.sp,
             height: 32 / 18,
             fontWeight: FontWeight.w500,

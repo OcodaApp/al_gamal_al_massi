@@ -4,10 +4,10 @@ import '../../../core/constants/extensions.dart';
 import '../../widgets/shared_widget/custom_elevated_button.dart';
 import '../../widgets/shared_widget/custom_sizedbox.dart';
 import '../../widgets/shared_widget/offer_builder_widget.dart';
-import '../../widgets/user_home_widdgets/carousel_widget.dart';
-import '../../widgets/user_home_widdgets/clinics_builder.dart';
-import '../../widgets/user_home_widdgets/home_tab_bar_widget.dart';
-import '../../widgets/user_home_widdgets/user_home_intro_widget.dart';
+import '../../widgets/user_home_widgets/carousel_widget.dart';
+import '../../widgets/user_home_widgets/clinics_builder.dart';
+import '../../widgets/user_home_widgets/home_tab_bar_widget.dart';
+import '../../widgets/user_home_widgets/user_home_intro_widget.dart';
 
 class UserHomeScreen extends StatelessWidget {
   const UserHomeScreen({super.key});
@@ -23,7 +23,7 @@ class UserHomeScreen extends StatelessWidget {
             const CustomSizedBox(
               height: 16,
             ),
-            MyCarouselWidget(),
+            const MyCarouselWidget(),
             const CustomSizedBox(
               height: 24,
             ),

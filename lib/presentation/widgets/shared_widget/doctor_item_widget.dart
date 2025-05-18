@@ -15,10 +15,9 @@ class DoctorItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-     onTap: (){
-       Navigator.pushNamed(context, ScreenName.doctorDetailsScreen);
-
-     },
+      onTap: () {
+        Navigator.pushNamed(context, ScreenName.doctorDetailsScreen);
+      },
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
@@ -78,13 +77,12 @@ class DoctorItemWidget extends StatelessWidget {
                           width: 14.w,
                           height: 14.h,
                         ),
-                        CustomSizedBox(
+                        const CustomSizedBox(
                           width: 4,
                         ),
                         Text(
                           "4.8",
-                          style: CustomThemes.primaryTextColorTextTheme(context)
-                              .copyWith(
+                          style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                             fontSize: 10,
                             fontWeight: FontWeight.normal,
                           ),
@@ -108,8 +106,7 @@ class DoctorItemWidget extends StatelessWidget {
                 children: [
                   Text(
                     "Name",
-                    style:
-                        CustomThemes.primaryTextColorTextTheme(context).copyWith(
+                    style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500,
                       // height: 14.sp / 20,
@@ -125,8 +122,7 @@ class DoctorItemWidget extends StatelessWidget {
                           "5 Years experience",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: CustomThemes.secondaryTextColorTextTheme(context)
-                              .copyWith(
+                          style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                             fontSize: 10.sp,
                             fontWeight: FontWeight.w500,
                             // height: 14.sp / 20,
@@ -135,8 +131,7 @@ class DoctorItemWidget extends StatelessWidget {
                       ),
                       Text(
                         "30 SAR",
-                        style: CustomThemes.primaryTextColorTextTheme(context)
-                            .copyWith(
+                        style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                           fontSize: 10.sp,
                           fontWeight: FontWeight.bold,
                           // height: 14.sp / 20,

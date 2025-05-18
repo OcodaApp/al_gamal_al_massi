@@ -52,6 +52,10 @@ class AppTheme {
         color: AppColors.primaryColor,
         fontFamily: FontsPath.inter,
       ),
+      titleSmall: TextStyle(
+        color: AppColors.greyTextColor73,
+        fontFamily: FontsPath.inter,
+      ),
     ),
   );
 }

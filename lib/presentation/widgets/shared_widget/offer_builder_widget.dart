@@ -10,7 +10,10 @@ import 'offer_widget.dart';
 class OffersBuilderWidget extends StatelessWidget {
   final String widgetTitle;
 
-  const OffersBuilderWidget({super.key, required this.widgetTitle,});
+  const OffersBuilderWidget({
+    super.key,
+    required this.widgetTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class OffersBuilderWidget extends StatelessWidget {
             Expanded(
               child: Text(
                 widgetTitle,
-                style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+                style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                   fontSize: 24.sp,
                   fontWeight: FontWeight.normal,
                   // height: 14.sp / 20,
@@ -46,7 +49,9 @@ class OffersBuilderWidget extends StatelessWidget {
             ),
           ],
         ),
-        const CustomSizedBox(height: 8,),
+        const CustomSizedBox(
+          height: 8,
+        ),
         ListView.separated(
           shrinkWrap: true,
           padding: EdgeInsets.zero,

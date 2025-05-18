@@ -81,8 +81,7 @@ class OfferWidget extends StatelessWidget {
                   children: [
                     Text(
                       "Offer Name",
-                      style: CustomThemes.primaryTextColorTextTheme(context)
-                          .copyWith(
+                      style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.bold,
                         // height: 14.sp / 20,
@@ -93,8 +92,7 @@ class OfferWidget extends StatelessWidget {
                     ),
                     Text(
                       "30 SAR",
-                      style: CustomThemes.primaryTextColorTextTheme(context)
-                          .copyWith(
+                      style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                         fontSize: 10.sp,
                         fontWeight: FontWeight.bold,
                         // height: 14.sp / 20,
@@ -105,8 +103,7 @@ class OfferWidget extends StatelessWidget {
                     ),
                     Text(
                       "Clinic Name . Laser",
-                      style: CustomThemes.secondaryTextColorTextTheme(context)
-                          .copyWith(
+                      style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
                         fontSize: 10.sp,
                         fontWeight: FontWeight.bold,
                         // height: 14.sp / 20,
@@ -130,8 +127,7 @@ class OfferWidget extends StatelessWidget {
                   ),
                   Text(
                     "4.8",
-                    style: CustomThemes.primaryTextColorTextTheme(context)
-                        .copyWith(
+                    style: CustomThemes.greyTextColorTextTheme(context).copyWith(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.normal,
                     ),

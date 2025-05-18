@@ -30,27 +30,28 @@ class CustomTextField extends StatelessWidget {
     this.fillColor,
     this.filled,
     this.validator,
-    this.contentPadding, this.borderRadiusValue,
+    this.contentPadding,
+    this.borderRadiusValue,
   });
 
   @override
   Widget build(BuildContext context) {
     InputBorder border = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(borderRadiusValue?.r??8.r),
+      borderRadius: BorderRadius.circular(borderRadiusValue?.r ?? 8.r),
       borderSide: BorderSide(
         color: AppColors.loginTextFieldBorderColor,
         width: 1.w,
       ),
     );
     InputBorder focusedBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(borderRadiusValue?.r??8.r),
+      borderRadius: BorderRadius.circular(borderRadiusValue?.r ?? 8.r),
       borderSide: BorderSide(
         color: AppColors.primaryColor,
         width: 1.w,
       ),
     );
     InputBorder errorBorderColor = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(borderRadiusValue?.r??8.r),
+      borderRadius: BorderRadius.circular(borderRadiusValue?.r ?? 8.r),
       borderSide: BorderSide(
         color: Colors.red,
         width: 1.w,
@@ -61,10 +62,10 @@ class CustomTextField extends StatelessWidget {
       obscureText: isNotVisible,
       focusNode: focusNode,
       validator: validator,
-      onTapOutside: (pp){
+      onTapOutside: (pp) {
         FocusScope.of(context).unfocus();
       },
-      style: CustomThemes.primaryTextColorTextTheme(context).copyWith(
+      style: CustomThemes.greyTextColorTextTheme(context).copyWith(
         fontSize: 16.sp,
         height: 22 / 18,
         fontWeight: FontWeight.w400,
@@ -75,8 +76,7 @@ class CustomTextField extends StatelessWidget {
         enabledBorder: border,
         disabledBorder: border,
         errorBorder: errorBorderColor,
-        contentPadding: contentPadding ??
-            EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+        contentPadding: contentPadding ?? EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         fillColor: fillColor,

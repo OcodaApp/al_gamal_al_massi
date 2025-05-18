@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -30,6 +29,8 @@ class AppColors {
   static const loginTextFieldBorderColor = Color(0xffAAAAAA);
   static const pinFieldsInActiveBorderColor = Color(0xffA7A7A7);
   static const secondaryTextColor = Color(0xff494949);
+  static const greyTextColor73 = Color(0xff737373);
+  static const greyColorF7 = Color(0xffF7F7F7);
   static const selectedProfileTypeBorderColor = Color(0xff1C443B);
   static const selectedProfileTypeBackColor = Color(0xffEDF8F5);
   static const activeTabBarIndicatorColor = Color(0xff1B493E);
@@ -39,5 +40,6 @@ class AppColors {
   static const unActiveDotColor = Color(0xffA0A0A0);
   static const blackColor = Color(0xff000000);
   static const doctorDetailsIntroBackgroundColor = Color(0xffFFF4EE);
-  static  shadowColor({double opacityValue = 0}) => const Color(0xff000000).withOpacity(opacityValue);
+  static shadowColor({double opacityValue = 0}) =>
+      const Color(0xff000000).withOpacity(opacityValue);
 }

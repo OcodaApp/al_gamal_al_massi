@@ -10,6 +10,7 @@ import '../../../core/assets_path/svg_path.dart';
 
 class AuthIntroComponent extends StatefulWidget {
   final List<Widget> children;
+
   /// Auth intro component is a widget contains of the intro images and logo
   /// and contains the smooth page indicator
   const AuthIntroComponent({super.key, required this.children});
@@ -24,19 +25,19 @@ class _AuthIntroComponentState extends State<AuthIntroComponent> {
       "image": ImagesPath.authDoctor,
       "title": "Lorem ipsum dolor sit amet, consectetuer",
       "description":
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod",
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod",
     },
     {
       "image": ImagesPath.authDoctor,
       "title": "Lorem ipsum dolor sit amet, consectetuer",
       "description":
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod",
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod",
     },
     {
       "image": ImagesPath.authDoctor,
       "title": "Lorem ipsum dolor sit amet, consectetuer",
       "description":
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod",
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod",
     },
   ];
 
@@ -58,10 +59,14 @@ class _AuthIntroComponentState extends State<AuthIntroComponent> {
                   top: 54.h,
                   start: 0,
                   end: 0,
-                  child:  SvgPicture.asset(
+                  child: SvgPicture.asset(
                     SvgPath.logo,
-                    height: 53.h,
                     width: 177.w,
+                    fit: BoxFit.scaleDown,
+                    colorFilter: const ColorFilter.mode(
+                      AppColors.primaryColor,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
                 PositionedDirectional(
@@ -88,10 +93,9 @@ class _AuthIntroComponentState extends State<AuthIntroComponent> {
                       controller: controller,
                       onPageChanged: (index) {
                         controller.animateToPage(index,
-                            duration: Duration(milliseconds: 200),
-                            curve: Curves.easeInOut);
+                            duration: const Duration(milliseconds: 200), curve: Curves.easeInOut);
                       },
-                    ).animate().fadeIn(duration: Duration(milliseconds: 400)),
+                    ).animate().fadeIn(duration: const Duration(milliseconds: 400)),
                   ),
                 ),
                 PositionedDirectional(
@@ -139,7 +143,6 @@ class _AuthIntroComponentState extends State<AuthIntroComponent> {
                     ),
                   ),
                   ...widget.children,
-
                 ],
               ),
             ),

@@ -13,6 +13,7 @@ class CustomElevatedButton extends StatelessWidget {
   final void Function()? onPressed;
   final Widget? child;
   final String? text;
+  final double? width;
   final TextStyle? titleStyle;
 
   const CustomElevatedButton({
@@ -22,7 +23,8 @@ class CustomElevatedButton extends StatelessWidget {
     this.onPressed,
     this.child,
     this.text,
-     this.borderRadius = 4,
+    this.width,
+    this.borderRadius = 4,
     this.titleStyle,
     this.elevation,
     this.padding,
@@ -30,28 +32,29 @@ class CustomElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        foregroundColor: foregroundColor,
-        disabledBackgroundColor: AppColors.secondaryTextColor,
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        padding: padding,
-        shadowColor: Colors.transparent,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius.r),
-        ),
-      ),
-      child: child ??
-          Text(
-            text ?? "",
-            style: titleStyle ??
-                CustomThemes.whiteTextColorTextTheme(context).copyWith(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.normal
-                ),
+    return SizedBox(
+      width: width,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          foregroundColor: foregroundColor,
+          disabledBackgroundColor: AppColors.secondaryTextColor,
+          backgroundColor: backgroundColor,
+          elevation: elevation,
+          padding: padding,
+          shadowColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius.r),
           ),
+        ),
+        child: child ??
+            Text(
+              text ?? "",
+              style: titleStyle ??
+                  CustomThemes.whiteTextColorTextTheme(context)
+                      .copyWith(fontSize: 16.sp, fontWeight: FontWeight.normal),
+            ),
+      ),
     );
   }
 }

@@ -1,4 +1,3 @@
-
 import 'package:al_gamal_al_massi/core/app_router/screens_name.dart';
 import 'package:al_gamal_al_massi/presentation/screens/auth_screens/complete_profile_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/auth_screens/otp_screen.dart';
@@ -10,12 +9,12 @@ import 'package:flutter/material.dart';
 import '../../presentation/screens/auth_screens/login_screen.dart';
 import '../../presentation/screens/auth_screens/splash_screen.dart';
 import '../../presentation/screens/layout/user_layout_screen.dart';
+import '../../presentation/screens/profiles_screen/edit_profile_screen.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     try {
       switch (settings.name) {
-
         case ScreenName.splashScreen:
           return MaterialPageRoute(
             builder: (_) => const SplashScreen(),
@@ -47,6 +46,10 @@ class AppRouter {
         case ScreenName.userMainLayoutScreen:
           return MaterialPageRoute(
             builder: (_) => const UserMainLayoutScreen(),
+          );
+        case ScreenName.editProfile:
+          return MaterialPageRoute(
+            builder: (_) => const EditProfileScreen(),
           );
         default:
           return _errorRoute();

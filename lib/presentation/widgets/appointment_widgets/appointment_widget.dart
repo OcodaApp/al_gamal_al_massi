@@ -8,7 +8,6 @@ import 'package:flutter_svg/svg.dart';
 import '../../../core/assets_path/images_path.dart';
 import '../../../core/assets_path/svg_path.dart';
 
-
 class AppointmentWidget extends StatelessWidget {
   const AppointmentWidget({super.key});
 
@@ -83,103 +82,102 @@ class AppointmentWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              const CustomSizedBox(width: 16,),
+              const CustomSizedBox(
+                width: 16,
+              ),
               Expanded(
                   child: Column(
+                children: [
+                  Row(
                     children: [
+                      Expanded(
+                        child: Text(
+                          "Fahid Majrashi",
+                          style: CustomThemes.greyTextColorTextTheme(context).copyWith(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Male . 5.Y.E",
+                        style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                          fontSize: 10.sp,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      )
+                    ],
+                  ),
+                  const CustomSizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "Today . Laser . After 10 min",
+                          style: CustomThemes.secondaryTextColorTextTheme(context).copyWith(
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
                       Row(
                         children: [
-                          Expanded(
-                            child: Text(
-                              "Fahid Majrashi",
-                              style: CustomThemes.primaryTextColorTextTheme(context)
-                                  .copyWith(
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.normal,
-                              ),
-                            ),
+                          SvgPicture.asset(
+                            SvgPath.call,
+                            width: 16.w,
+                            height: 16.h,
+                          ),
+                          const CustomSizedBox(
+                            width: 4,
+                          ),
+                          SvgPicture.asset(
+                            SvgPath.calendarDots,
+                            width: 16.w,
+                            height: 16.h,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  const CustomSizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "30 SAR",
+                          style: CustomThemes.greyTextColorTextTheme(context).copyWith(
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            SvgPath.star,
+                            width: 14.w,
+                            height: 14.h,
+                          ),
+                          const CustomSizedBox(
+                            width: 8,
                           ),
                           Text(
-                            "Male . 5.Y.E",
-                            style: CustomThemes.secondaryTextColorTextTheme(context)
-                                .copyWith(
-                              fontSize: 10.sp,
+                            "4.8",
+                            style: CustomThemes.greyTextColorTextTheme(context).copyWith(
+                              fontSize: 10,
                               fontWeight: FontWeight.normal,
                             ),
                           )
                         ],
-                      ),
-                      const CustomSizedBox(height: 8,),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              "Today . Laser . After 10 min",
-                              style:
-                              CustomThemes.secondaryTextColorTextTheme(context)
-                                  .copyWith(
-                                fontSize: 10.sp,
-                                fontWeight: FontWeight.normal,
-                              ),
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                SvgPath.call,
-                                width: 16.w,
-                                height: 16.h,
-                              ),
-                              const CustomSizedBox(
-                                width: 4,
-                              ),
-                              SvgPicture.asset(
-                                SvgPath.calendarDots,
-                                width: 16.w,
-                                height: 16.h,
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      const CustomSizedBox(height: 8,),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              "30 SAR",
-                              style: CustomThemes.primaryTextColorTextTheme(context)
-                                  .copyWith(
-                                fontSize: 10.sp,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                SvgPath.star,
-                                width: 14.w,
-                                height: 14.h,
-                              ),
-                              const CustomSizedBox(
-                                width: 8,
-                              ),
-                              Text(
-                                "4.8",
-                                style:
-                                CustomThemes.primaryTextColorTextTheme(context)
-                                    .copyWith(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
+                      )
                     ],
-                  ))
+                  ),
+                ],
+              ))
             ],
           ),
         ),
