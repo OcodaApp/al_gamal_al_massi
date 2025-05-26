@@ -255,7 +255,11 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
             CustomElevatedButton(
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(
-                    context, ScreenName.userMainLayoutScreen, (route) => false);
+                    context,
+                    selectedProfileType == 0
+                        ? ScreenName.userMainLayoutScreen
+                        : ScreenName.doctorLayoutScreen,
+                    (route) => false);
               },
               text: "Sign up",
             ),

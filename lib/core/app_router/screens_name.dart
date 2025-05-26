@@ -7,5 +7,8 @@ class ScreenName {
   static const allDoctorsInClinicOrCategoryScreen = "allDoctorsInClinicOrCategoryScreen";
   static const conversationScreen = "conversationScreen";
   static const userMainLayoutScreen = "userMainLayoutScreen";
+
+  static const doctorLayoutScreen = "doctorLayoutScreen";
   static const editProfile = "editProfile";
+  static const requestAppointment = "requestAppointment";
 }

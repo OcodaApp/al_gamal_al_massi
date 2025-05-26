@@ -9,7 +9,8 @@ import '../../../core/assets_path/images_path.dart';
 import '../../../core/assets_path/svg_path.dart';
 
 class AppointmentWidget extends StatelessWidget {
-  const AppointmentWidget({super.key});
+  final bool showRating;
+  const AppointmentWidget({super.key, this.showRating = true});
 
   @override
   Widget build(BuildContext context) {
@@ -144,38 +145,39 @@ class AppointmentWidget extends StatelessWidget {
                   const CustomSizedBox(
                     height: 8,
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          "30 SAR",
-                          style: CustomThemes.greyTextColorTextTheme(context).copyWith(
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.bold,
+                  if (showRating)
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            "30 SAR",
+                            style: CustomThemes.greyTextColorTextTheme(context).copyWith(
+                              fontSize: 10.sp,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
-                      Row(
-                        children: [
-                          SvgPicture.asset(
-                            SvgPath.star,
-                            width: 14.w,
-                            height: 14.h,
-                          ),
-                          const CustomSizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            "4.8",
-                            style: CustomThemes.greyTextColorTextTheme(context).copyWith(
-                              fontSize: 10,
-                              fontWeight: FontWeight.normal,
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              SvgPath.star,
+                              width: 14.w,
+                              height: 14.h,
                             ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                            const CustomSizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              "4.8",
+                              style: CustomThemes.greyTextColorTextTheme(context).copyWith(
+                                fontSize: 10,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                 ],
               ))
             ],

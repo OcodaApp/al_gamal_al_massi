@@ -1,3 +1,4 @@
+import 'package:al_gamal_al_massi/core/app_router/screens_name.dart';
 import 'package:al_gamal_al_massi/core/constants/extensions.dart';
 import 'package:al_gamal_al_massi/presentation/widgets/shared_widget/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
@@ -264,7 +265,9 @@ class DoctorsDetailsScreen extends StatelessWidget {
                   itemCount: 3,
                 ),
                 CustomElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, ScreenName.requestAppointment);
+                  },
                   padding: EdgeInsets.symmetric(vertical: 12.h),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

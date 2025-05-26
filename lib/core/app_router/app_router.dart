@@ -6,8 +6,10 @@ import 'package:al_gamal_al_massi/presentation/screens/doctor_details_screen/doc
 import 'package:al_gamal_al_massi/presentation/screens/doctors_category_or_clinic_screen/doctors_category_or_clinic_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../presentation/screens/appointment_screens/request_appointment.dart';
 import '../../presentation/screens/auth_screens/login_screen.dart';
 import '../../presentation/screens/auth_screens/splash_screen.dart';
+import '../../presentation/screens/layout/doctor_layout_screen.dart';
 import '../../presentation/screens/layout/user_layout_screen.dart';
 import '../../presentation/screens/profiles_screen/edit_profile_screen.dart';
 
@@ -47,9 +49,18 @@ class AppRouter {
           return MaterialPageRoute(
             builder: (_) => const UserMainLayoutScreen(),
           );
+
+        case ScreenName.doctorLayoutScreen:
+          return MaterialPageRoute(
+            builder: (_) => const DoctorLayoutScreen(),
+          );
         case ScreenName.editProfile:
           return MaterialPageRoute(
             builder: (_) => const EditProfileScreen(),
+          );
+        case ScreenName.requestAppointment:
+          return MaterialPageRoute(
+            builder: (_) => const RequestAppointment(),
           );
         default:
           return _errorRoute();
