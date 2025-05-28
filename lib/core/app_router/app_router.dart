@@ -1,4 +1,5 @@
 import 'package:al_gamal_al_massi/core/app_router/screens_name.dart';
+import 'package:al_gamal_al_massi/presentation/screens/appointment_details_screens/user_appointment_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/auth_screens/complete_profile_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/auth_screens/otp_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/chat_screens/conversation_screen.dart';
@@ -6,6 +7,7 @@ import 'package:al_gamal_al_massi/presentation/screens/doctor_details_screen/doc
 import 'package:al_gamal_al_massi/presentation/screens/doctors_category_or_clinic_screen/doctors_category_or_clinic_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../presentation/screens/appointment_details_screens/report_details_screen.dart';
 import '../../presentation/screens/appointment_screens/request_appointment.dart';
 import '../../presentation/screens/auth_screens/login_screen.dart';
 import '../../presentation/screens/auth_screens/splash_screen.dart';
@@ -61,6 +63,14 @@ class AppRouter {
         case ScreenName.requestAppointment:
           return MaterialPageRoute(
             builder: (_) => const RequestAppointment(),
+          );
+        case ScreenName.reportDetailsScreen:
+          return MaterialPageRoute(
+            builder: (_) => const ReportDetailsScreen(),
+          );
+        case ScreenName.userAppointmentDetailsScreen:
+          return MaterialPageRoute(
+            builder: (_) => const UserAppointmentScreen(),
           );
         default:
           return _errorRoute();

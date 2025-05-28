@@ -133,7 +133,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                     vertical: 6.h,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF7F6F6),
+                    color: AppColors.greyBackgroundContainerColor,
                     borderRadius: BorderRadius.circular(
                       8.r,
                     ),

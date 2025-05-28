@@ -11,10 +11,11 @@ class FormTextFieldWidget extends StatelessWidget {
   final String formTitle;
   final EdgeInsetsGeometry? contentPadding;
   final bool optional;
-
+  final int maxlines;
   const FormTextFieldWidget({
     super.key,
     this.hintText,
+    this.maxlines = 1,
     this.controller,
     required this.formTitle,
     this.contentPadding,
@@ -58,6 +59,7 @@ class FormTextFieldWidget extends StatelessWidget {
           hintText: hintText ?? formTitle,
           controller: controller,
           contentPadding: contentPadding,
+          maxlines: maxlines,
         ),
       ],
     );

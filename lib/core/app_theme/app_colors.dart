@@ -33,6 +33,7 @@ class AppColors {
   static const greyColorF7 = Color(0xffF7F7F7);
   static const selectedProfileTypeBorderColor = Color(0xff1C443B);
   static const selectedProfileTypeBackColor = Color(0xffEDF8F5);
+  static const greyBackgroundContainerColor = Color(0xFFF7F6F6);
   static const activeTabBarIndicatorColor = Color(0xff1B493E);
   static const unActiveTabBarIndicatorColor = Color(0xffFAFAFA);
   static const unSelectedProfileTypeBorderColor = Color(0xffE9E9E9);

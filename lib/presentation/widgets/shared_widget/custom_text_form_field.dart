@@ -16,6 +16,7 @@ class CustomTextField extends StatelessWidget {
   final bool? filled;
   final double? borderRadiusValue;
   final FocusNode? focusNode;
+  final int maxlines;
   final String? Function(String?)? validator;
 
   const CustomTextField({
@@ -32,6 +33,7 @@ class CustomTextField extends StatelessWidget {
     this.validator,
     this.contentPadding,
     this.borderRadiusValue,
+    this.maxlines = 1,
   });
 
   @override
@@ -62,6 +64,7 @@ class CustomTextField extends StatelessWidget {
       obscureText: isNotVisible,
       focusNode: focusNode,
       validator: validator,
+      maxLines: maxlines,
       onTapOutside: (pp) {
         FocusScope.of(context).unfocus();
       },

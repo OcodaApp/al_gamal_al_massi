@@ -9,6 +9,8 @@ import 'bloc_observer.dart';
 import 'core/app_router/app_router.dart';
 import 'core/app_router/screens_name.dart';
 import 'firebase_options.dart';
+import 'presentation/screens/appointment_details_screens/user_appointment_screen.dart';
+import 'presentation/screens/drawer_screens/contact_us.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
@@ -34,9 +36,9 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           navigatorKey: navigatorKey,
           theme: AppTheme.lightTheme,
-          onGenerateRoute: AppRouter.generateRoute,
-          initialRoute: ScreenName.splashScreen,
-          // home: RequestAppointment(),
+          // onGenerateRoute: AppRouter.generateRoute,
+          // initialRoute: ScreenName.splashScreen,
+          home: ContactUsScreen(),
         );
       },
     );
