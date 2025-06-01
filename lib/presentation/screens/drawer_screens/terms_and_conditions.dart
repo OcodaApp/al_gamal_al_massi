@@ -1,4 +1,3 @@
-import 'package:al_gamal_al_massi/presentation/widgets/shared_widget/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -62,19 +61,6 @@ class TermsAndConditionsScreen extends StatelessWidget {
               itemCount: 4,
             ),
           ),
-          const CustomSizedBox(
-            height: 16,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16,
-            ),
-            child: CustomElevatedButton(
-              width: double.infinity,
-              onPressed: () {},
-              text: 'Download report',
-            ),
-          )
         ],
       ),
     );

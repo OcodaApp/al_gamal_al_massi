@@ -27,5 +27,8 @@ class SvgPath {
   static const phone = "assets/svg/phone.svg";
   static const message = "assets/svg/message.svg";
   static const upload = "assets/svg/upload.svg";
+  static const notification = "assets/svg/notification.svg";
+  static const clock = "assets/svg/clock.svg";
+
   SvgPath._();
 }

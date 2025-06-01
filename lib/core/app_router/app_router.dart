@@ -5,6 +5,12 @@ import 'package:al_gamal_al_massi/presentation/screens/auth_screens/otp_screen.d
 import 'package:al_gamal_al_massi/presentation/screens/chat_screens/conversation_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/doctor_details_screen/doctor_details_screen.dart';
 import 'package:al_gamal_al_massi/presentation/screens/doctors_category_or_clinic_screen/doctors_category_or_clinic_screen.dart';
+import 'package:al_gamal_al_massi/presentation/screens/drawer_screens/contact_us.dart';
+import 'package:al_gamal_al_massi/presentation/screens/drawer_screens/invoices_screen.dart';
+import 'package:al_gamal_al_massi/presentation/screens/drawer_screens/privacy_policy_screen.dart';
+import 'package:al_gamal_al_massi/presentation/screens/drawer_screens/settings_screen.dart';
+import 'package:al_gamal_al_massi/presentation/screens/drawer_screens/terms_and_conditions.dart';
+import 'package:al_gamal_al_massi/presentation/screens/notifications_screen/notifications.dart';
 import 'package:flutter/material.dart';
 
 import '../../presentation/screens/appointment_details_screens/report_details_screen.dart';
@@ -72,6 +78,30 @@ class AppRouter {
           return MaterialPageRoute(
             builder: (_) => const UserAppointmentScreen(),
           );
+        case ScreenName.contactUs:
+          return MaterialPageRoute(
+            builder: (_) => const ContactUsScreen(),
+          );
+        case ScreenName.settings:
+          return MaterialPageRoute(
+            builder: (_) => const SettingsScreen(),
+          );
+        case ScreenName.termsAndConditions:
+          return MaterialPageRoute(
+            builder: (_) => const TermsAndConditionsScreen(),
+          );
+        case ScreenName.privacyPolicy:
+          return MaterialPageRoute(
+            builder: (_) => const PrivacyPoliceScreen(),
+          );
+        case ScreenName.invoices:
+          return MaterialPageRoute(
+            builder: (_) => const InvoicesScreen(),
+          );
+        case ScreenName.notification:
+          return MaterialPageRoute(
+            builder: (_) => const NotificationsScreen(),
+          );
         default:
           return _errorRoute();
       }
@@ -79,15 +109,6 @@ class AppRouter {
       return _errorRoute();
     }
   }
-
-  // static const splashScreen = "splashScreen";
-  // static const loginOrRegisterScreen = "loginOrRegisterScreen";
-  // static const otpScreen = "otpScreen";
-  // static const completeProfile = "completeProfile";
-  // static const doctorDetailsScreen = "doctorDetailsScreen";
-  // static const allDoctorsInClinicOrCategoryScreen = "allDoctorsInClinicOrCategoryScreen";
-  // static const chatsScreen = "chatsScreen";
-  // static const userMainLayoutScreen = "userMainLayoutScreen";
 
   static Route<dynamic> _errorRoute() {
     return MaterialPageRoute(builder: (_) {

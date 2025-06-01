@@ -1,5 +1,6 @@
 import 'package:al_gamal_al_massi/core/app_theme/app_theme.dart';
 import 'package:al_gamal_al_massi/core/cache_helper/shared_pref_methods.dart';
+import 'package:al_gamal_al_massi/presentation/screens/notifications_screen/notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,7 +10,8 @@ import 'bloc_observer.dart';
 import 'core/app_router/app_router.dart';
 import 'core/app_router/screens_name.dart';
 import 'firebase_options.dart';
-import 'presentation/screens/appointment_details_screens/user_appointment_screen.dart';
+import 'presentation/screens/drawer_screens/invoices_screen.dart';
+import 'presentation/screens/drawer_screens/settings_screen.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           onGenerateRoute: AppRouter.generateRoute,
           initialRoute: ScreenName.splashScreen,
-          // home: UserAppointmentScreen(),
+          // home: SettingsScreen(),
         );
       },
     );

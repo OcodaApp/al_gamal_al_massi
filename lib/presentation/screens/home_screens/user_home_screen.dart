@@ -1,3 +1,4 @@
+import 'package:al_gamal_al_massi/presentation/widgets/shared_widget/app_drawer.dart';
 import 'package:flutter/material.dart';
 import '../../../core/app_router/screens_name.dart';
 import '../../../core/constants/extensions.dart';
@@ -9,17 +10,29 @@ import '../../widgets/user_home_widgets/clinics_builder.dart';
 import '../../widgets/user_home_widgets/home_tab_bar_widget.dart';
 import '../../widgets/user_home_widgets/user_home_intro_widget.dart';
 
-class UserHomeScreen extends StatelessWidget {
+class UserHomeScreen extends StatefulWidget {
   const UserHomeScreen({super.key});
 
   @override
+  State<UserHomeScreen> createState() => _UserHomeScreenState();
+}
+
+class _UserHomeScreenState extends State<UserHomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: const MyAppDrawer(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const UserHomeIntroWidget(),
+            UserHomeIntroWidget(
+              onDrawerClicked: () {
+                _scaffoldKey.currentState?.openDrawer();
+              },
+            ),
             const CustomSizedBox(
               height: 16,
             ),

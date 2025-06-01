@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../core/app_router/screens_name.dart';
 import '../../../core/app_theme/app_colors.dart';
 import '../../../core/app_theme/custom_themes.dart';
 import '../../../core/assets_path/svg_path.dart';
@@ -9,7 +10,8 @@ import '../shared_widget/custom_sizedbox.dart';
 import '../shared_widget/custom_text_form_field.dart';
 
 class UserHomeIntroWidget extends StatelessWidget {
-  const UserHomeIntroWidget({super.key});
+  final void Function()? onDrawerClicked;
+  const UserHomeIntroWidget({super.key, this.onDrawerClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +48,7 @@ class UserHomeIntroWidget extends StatelessWidget {
                           ),
                           Text(
                             "30 Tahir Al-Jazairi Street, Makkah",
-                            style: CustomThemes.primaryColorTextTheme(context)
-                                .copyWith(
+                            style: CustomThemes.primaryColorTextTheme(context).copyWith(
                               fontSize: 12.sp,
                               fontWeight: FontWeight.normal,
                               decoration: TextDecoration.underline,
@@ -62,7 +63,9 @@ class UserHomeIntroWidget extends StatelessWidget {
                       height: 26.h,
                       width: 26.w,
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, ScreenName.notification);
+                        },
                         icon: SvgPicture.asset(
                           SvgPath.bell,
                           height: 24.h,
@@ -77,7 +80,7 @@ class UserHomeIntroWidget extends StatelessWidget {
                       height: 26.h,
                       width: 26.w,
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: onDrawerClicked,
                         icon: SvgPicture.asset(
                           SvgPath.setting,
                           height: 24.h,
@@ -94,8 +97,7 @@ class UserHomeIntroWidget extends StatelessWidget {
                   height: 40.h,
                   width: double.infinity,
                   child: CustomTextField(
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
                     filled: true,
                     fillColor: AppColors.whiteColor,
                     hintText: "Search for",

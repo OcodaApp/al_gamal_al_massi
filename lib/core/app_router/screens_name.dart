@@ -12,4 +12,10 @@ class ScreenName {
   static const userAppointmentDetailsScreen = "userAppointmentDetailsScreen";
   static const editProfile = "editProfile";
   static const requestAppointment = "requestAppointment";
+  static const contactUs = "contactUs";
+  static const settings = "settings";
+  static const termsAndConditions = "termsAndConditions";
+  static const privacyPolicy = "privacyPolicy";
+  static const invoices = "invoices";
+  static const notification = "notification";
 }

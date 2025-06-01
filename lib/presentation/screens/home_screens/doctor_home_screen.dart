@@ -2,21 +2,34 @@ import 'package:al_gamal_al_massi/presentation/widgets/appointment_widgets/appoi
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/app_theme/custom_themes.dart';
+import '../../widgets/shared_widget/app_drawer.dart';
 import '../../widgets/shared_widget/custom_sizedbox.dart';
 import '../../widgets/user_home_widgets/carousel_widget.dart';
 import '../../widgets/doctor_home_widgets/doctor_home_intro_widget.dart';
 
-class DoctorHomeScreen extends StatelessWidget {
+class DoctorHomeScreen extends StatefulWidget {
   const DoctorHomeScreen({super.key});
 
   @override
+  State<DoctorHomeScreen> createState() => _DoctorHomeScreenState();
+}
+
+class _DoctorHomeScreenState extends State<DoctorHomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: const MyAppDrawer(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DoctorHomeIntroWidget(),
+            DoctorHomeIntroWidget(
+              onDrawerClicked: () {
+                _scaffoldKey.currentState?.openDrawer();
+              },
+            ),
             const CustomSizedBox(
               height: 16,
             ),
